@@ -22,8 +22,8 @@ COPY data/populate.py .
 COPY data/metadata_10k.json .
 COPY data/geodata.csv .
 
-RUN mkdir solr_notebooks
-COPY solr_notebooks solr_notebooks
+RUN mkdir notebooks
+COPY notebooks notebooks
 
 RUN /sbin/ip route
 RUN echo "if you error out after this, you didn't set up config.txt right and/or your rpc_address needs to change"
@@ -34,5 +34,5 @@ RUN python populate.py metadata_10k.json geodata.csv
 RUN cd cql_kernel/cql_kernel &&  python install.py $(< ../../config.txt)
 RUN cd cql_kernel && python setup.py install
 
-ENTRYPOINT jupyter notebook --no-browser --port 7001 --ip=* --notebook_dir="solr_notebooks"  
+ENTRYPOINT jupyter notebook --no-browser --port 7001 --ip=* --notebook_dir="notebooks"  
 #ENTRYPOINT /bin/bash
