@@ -17,10 +17,10 @@ COPY config.txt cql_kernel/cql_kernel/config.txt
 
 RUN pip install jupyter
 
-COPY solr_exercises/Lab1Ex2/populate_simple.py .
-COPY solr_exercises/Lab1Ex2/populate.py .
-COPY solr_exercises/Lab1Ex2/metadata_10k.json .
-COPY solr_exercises/Lab1Ex2/geodata.csv .
+COPY data/populate_simple.py .
+COPY data/populate.py .
+COPY data/metadata_10k.json .
+COPY data/geodata.csv .
 
 RUN mkdir solr_notebooks
 COPY solr_notebooks solr_notebooks
