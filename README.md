@@ -2,6 +2,17 @@
 
 ##Docker
 
+install docker https://docs.docker.com/engine/installation/linux
+
+add your user to the docker group 
+
+    sudo gpasswd -a ${USER} docker
+
+and refresh:
+
+    newgrp docker
+
+
     cat /etc/dse/cassandra/cassandra.yaml | grep broadcast_rpc_address:|awk -F' ' '{print $2}' > config.txt
 
 
