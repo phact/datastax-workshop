@@ -1,5 +1,7 @@
 # datastax-workshop
 
+The workshop is a dockerized notebook that includes the data load and setup + the exercises hosted on port 7001.
+
 ##Docker
 
 install docker https://docs.docker.com/engine/installation/linux
