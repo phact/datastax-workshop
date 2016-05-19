@@ -27,9 +27,9 @@ COPY notebooks notebooks
 
 RUN /sbin/ip route
 RUN echo "if you error out after this, you didn't set up config.txt right and/or your rpc_address needs to change"
-RUN python populate_simple.py metadata_10k.json geodata.csv
+#RUN python populate_simple.py metadata_10k.json geodata.csv
 
-RUN python populate.py metadata_10k.json geodata.csv
+#RUN python populate.py metadata_10k.json geodata.csv
 
 RUN cd cql_kernel/cql_kernel &&  python install.py $(< ../../config.txt)
 RUN cd cql_kernel && python setup.py install
