@@ -12,6 +12,7 @@ and refresh:
 
     newgrp docker
 
+Set up config.txt with your broadcast rpc address (client address for DSE)
 
     cat /etc/dse/cassandra/cassandra.yaml | grep broadcast_rpc_address:|awk -F' ' '{print $2}' > config.txt
 
