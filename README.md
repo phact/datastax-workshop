@@ -19,6 +19,23 @@ Set up config.txt with your broadcast rpc address (client address for DSE)
     cat /etc/dse/cassandra/cassandra.yaml | grep broadcast_rpc_address:|awk -F' ' '{print $2}' > config.txt
 
 
+For OSX
+```
+docker-machine start default
+eval $(docker-machine env default)
+#a bit of cleanup
+docker rm -f $(docker ps -aq)
+docker rmi -f $(docker images -aq)
+```
+
+For linux
+
+
+```
+service docker start
+```
+
+
 ```
 docker build -t cql-notebook-image .
 docker run --net=host -d -p 0.0.0.0:7001:7001 --name cql-notebook cql-notebook-image
