@@ -1,6 +1,6 @@
 #scotia workshop
 
-###http://bit.ly/1XBeF33
+###http://bit.ly/1XZiNvq
 
 
 ##credentials
