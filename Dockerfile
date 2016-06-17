@@ -2,7 +2,10 @@ FROM ubuntu:14.04
 
 RUN apt-get update && apt-get install -y \
     git git-core python-pip python-setuptools python-dev build-essential
-RUN git clone https://github.com/slowenthal/cql_kernel/
+# c* 2.1
+#RUN git clone https://github.com/slowenthal/cql_kernel/
+# c* 3.0
+RUN git clone https://github.com/phact/cql_kernel/
 RUN apt-get install libev4 libev-dev
 RUN pip install --upgrade cassandra-driver 
 
